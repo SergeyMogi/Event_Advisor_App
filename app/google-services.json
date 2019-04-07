@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "650704234565",
+    "firebase_url": "https://endofsemester-3ccc7.firebaseio.com",
+    "project_id": "endofsemester-3ccc7",
+    "storage_bucket": "endofsemester-3ccc7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650704234565:android:302765e881e88d8b",
+        "android_client_info": {
+          "package_name": "com.example.endofsemester"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "650704234565-jv6p1hbskrkspb1a1ve8m8fdnn0a1mi7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.endofsemester",
+            "certificate_hash": "6b9be07683180ab09fae810d3d2a8e4f128e4939"
+          }
+        },
+        {
+          "client_id": "650704234565-uvv3g4g2auotvf7knr7mranutj260npa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyJTfe-i2BB-_m_ps3i3FjYYtnIqgAniI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "650704234565-uvv3g4g2auotvf7knr7mranutj260npa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
