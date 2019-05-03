@@ -170,8 +170,11 @@ public class SearchByfilters extends AppCompatActivity {
     public void addSpinner() {
         Vector<String> str = new Vector<String>();
         BufferedReader in = null;
+
+        int BUFFER_SIZE = 8192;
+
         try {
-            in = new BufferedReader(new InputStreamReader(getAssets().open("city.txt"), "hebrew"));
+            in = new BufferedReader(new InputStreamReader(getAssets().open("city.txt")));
             String line = in.readLine();
             int index = 0;
             while (line != null) {
