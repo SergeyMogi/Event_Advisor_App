@@ -3,6 +3,7 @@ package com.example.endofsemester;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -57,41 +58,15 @@ public class SearchByfilters extends AppCompatActivity {
         metodSeekBarInvited();
         addSpinner();
         onResume();
-        f();
+
     }
-
-    private void checkTheData() {
-        for (ulam object : ulamArrayList) {
-            System.out.println(radioGroup.getCheckedRadioButtonId());
-            if (
-                    seekBarInvited.getProgress() <= object.getPrice()
-                            && seekBarRange.getProgress() <= object.getMuzmanim()
-                           && radioGroup.indexOfChild(findViewById(radioGroup.getCheckedRadioButtonId()))==object.getType()
-
-
-            )
-            {
-                resaultUlaml.add(object);
-            }
-        }
-        startActivity(new Intent(this,R_V.class));
-    }
-
-
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        resaultUlaml.clear();
-    }
-
     private void addNewUlam() {
-        ulamArrayList.add(new ulam(100, 270, "vfgh",R.drawable.n1,0));
-        ulamArrayList.add(new ulam(500, 350, "vfgh",R.drawable.n1,0));
-        ulamArrayList.add(new ulam(300, 300, "vfgh",R.drawable.n1,0));
-        ulamArrayList.add(new ulam(500, 290, "vfgh",R.drawable.n1,0));
-        ulamArrayList.add(new ulam(270, 600, "vfgh",R.drawable.n1,0));
-        ulamArrayList.add(new ulam(500, 34, "vfgh",R.drawable.n1,0));
+        ulamArrayList.add(new ulam(20, 200, "חולון",R.drawable.n1,0));
+        ulamArrayList.add(new ulam(500, 350, "קריית גת",R.drawable.n1,0));
+        ulamArrayList.add(new ulam(300, 300, "יבנה",R.drawable.n1,0));
+        ulamArrayList.add(new ulam(500, 290, "אילת",R.drawable.n1,0));
+        ulamArrayList.add(new ulam(270, 600, "גן יבנה",R.drawable.n1,0));
+        ulamArrayList.add(new ulam(500, 34, "אשקלון",R.drawable.n1,0));
 //        ulamArrayList.add(new ulam(500, 34, "vfgh",R.drawable.n1,1));
 //        ulamArrayList.add(new ulam(500, 34, "vfgh",R.drawable.n1,2));
 //        ulamArrayList.add(new ulam(500, 500, "vfgh",R.drawable.n1,3));
@@ -108,11 +83,37 @@ public class SearchByfilters extends AppCompatActivity {
 
     }
 
-    private void f() {
-        //List<ulam> search = new ArrayList<ulam>(price, muzmanim, );
+    private void checkTheData() {
+        for (ulam object : ulamArrayList) {
+            System.out.println(radioGroup.getCheckedRadioButtonId());
+            if (
+                    seekBarRange.getProgress() <= object.getPrice()
+                            && seekBarInvited.getProgress() <= object.getMuzmanim()
+                         /*  &&
+                            radioGroup.indexOfChild(findViewById(radioGroup.getCheckedRadioButtonId()))==object.getType()
+                            &&
+                            spinnerCitys.getSelectedItem()==object.getCity()*/
 
 
+            )
+            {
+                resaultUlaml.add(object);
+            }
+        }
+       startActivity(new Intent(this,R_V.class));
     }
+
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        resaultUlaml.clear();
+    }
+
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

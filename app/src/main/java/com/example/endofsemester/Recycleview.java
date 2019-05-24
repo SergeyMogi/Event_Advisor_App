@@ -25,8 +25,11 @@ import android.widget.TextView;
 
         @Override
         public void onBindViewHolder(@NonNull ViewHoledr viewHoledr, int i) {
-//            viewHoledr.id.setText(SearchByfilters.ulamArrayList.get(i).getCity());
-
+           viewHoledr.price.setText(""+SearchByfilters.resaultUlaml.get(i).getPrice());
+            viewHoledr.muzmanim.setText(""+SearchByfilters.resaultUlaml.get(i).getMuzmanim());
+            viewHoledr.type.setText(""+SearchByfilters.resaultUlaml.get(i).getType());
+            viewHoledr.image.setImageResource(SearchByfilters.resaultUlaml.get(i).getImage());
+         //   viewHoledr.city.setText(SearchByfilters.ulamArrayList.get(i).getCity());
         }
 
 
@@ -37,21 +40,22 @@ import android.widget.TextView;
         }
 
         public  class ViewHoledr extends RecyclerView.ViewHolder {
-            public TextView id;
-            public TextView name;
-            public TextView name1;
-            public TextView name2;
-            public ImageView image;
-            // public ImageView image;
+
+            public TextView price;
+           public TextView muzmanim;
+           public TextView type;
+           // public TextView city;
+             public ImageView image;
 
 
             public ViewHoledr(@NonNull View itemView) {
                 super(itemView);
-                id=itemView.findViewById(R.id.textView11);
-                name=itemView.findViewById(R.id.textView12);
-                name1=itemView.findViewById(R.id.textView13);
-                name2=itemView.findViewById(R.id.textView16);
+                price=itemView.findViewById(R.id.textView_price);
+                muzmanim=itemView.findViewById(R.id.textView_muzmanim);
+               type=itemView.findViewById(R.id.textView_type);
                 image=itemView.findViewById(R.id.image);
+               // city=itemView.findViewById(R.id.textView16);
+               // city=itemView.findViewById(R.id.image);
             }
         }
 

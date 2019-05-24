@@ -56,7 +56,7 @@ public void setImageButtens(){
         gps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nextGoToPage(SearchByGps.class);
+                nextGoToPage(MapsActivity.class);
 
             }
         });
